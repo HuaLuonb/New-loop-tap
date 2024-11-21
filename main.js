@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
+import './counter.js'
 
 const loopTapApp = createApp({
     data() {
