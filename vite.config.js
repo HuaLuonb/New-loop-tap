@@ -1,9 +1,18 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // 确保入口正确
-  root: './',
+  base: './',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
   }
 })
